@@ -1,49 +1,58 @@
 # Sentiment Analysis Model
 
-This repository contains code for training and inference of a sentiment analysis model using PyTorch.
+This repository contains code for training and performing inference with a sentiment analysis model built using PyTorch.
 
 ## Setup Environment
 
 To set up the environment, follow these steps:
 
 1. **Clone the repository:**
-    ```sh
+    ```bash
     git clone <repository_url>
     cd <repository_name>
     ```
 
 2. **Create a virtual environment:**
-    ```sh
+    ```bash
     python -m venv venv
     ```
 
 3. **Activate the virtual environment:**
     - On Windows:
-        ```sh
+        ```bash
         venv\Scripts\activate
         ```
     - On macOS and Linux:
-        ```sh
+        ```bash
         source venv/bin/activate
         ```
 
 4. **Install the required dependencies for Python 3.12:**
-    ```sh
+    ```bash
     pip install -r requirements.txt
     ```
 
-## Training the Model
+## Usage
 
+### Training the Model
 To train the sentiment analysis model, run the following command:
-    ```sh
-    python train.py
-    ```
-This command runs the training script for the machine learning model. It typically involves loading the dataset, preprocessing the data, defining the model architecture, and training the model using the specified parameters. The script may also include options for saving the trained model and logging the training progress.
+```bash
+python train.py
+```
+This script loads the dataset, preprocesses the data, defines the model architecture, and trains the model using the specified parameters. It may also support options for saving the trained model and logging training progress (check the script for additional flags or configuration).
 
-## Running Inference
+### Running Inference
+To perform inference using the pre-trained sentiment analysis model, run:
+```bash
+python inference.py
+```
+This script loads a pre-trained model, preprocesses input data, and generates predictions. Predictions can be output to a file or displayed, depending on the script’s options (refer to the script for details).
 
-To run inference using the sentiment analysis model, run the following command:
-    ```sh
-    python inference.py
-    ```
-This command runs the inference script for the machine learning model. It usually involves loading a pre-trained model, preprocessing the input data, and making predictions based on the input. The script may also include options for outputting the predictions to a file or displaying them in a user-friendly format.
+## Requirements
+- Python 3.12
+- PyTorch (specified in `requirements.txt`)
+- Additional dependencies listed in `requirements.txt`
+
+## Notes
+- Ensure you have a compatible GPU for faster training if using PyTorch with CUDA support.
+- Modify file paths or configurations in `train.py` and `inference.py` as needed for your dataset or model.
