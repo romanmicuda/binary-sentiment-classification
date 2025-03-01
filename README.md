@@ -40,6 +40,9 @@ To train the sentiment analysis model, run the following command:
     ```
 This command runs the training script for the machine learning model. It typically involves loading the dataset, preprocessing the data, defining the model architecture, and training the model using the specified parameters. The script may also include options for saving the trained model and logging the training progress.
 
+## Running Inference
+
+To run inference using the sentiment analysis model, run the following command:
     ```sh
     python inference.py
     ```
